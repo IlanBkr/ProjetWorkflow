@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <section2>
+        <h1>Bienvenue sur notre plateforme de gestion de workflow</h1>
+        <p>Utiliser votre imagination.</p>
+    </section2>
     
 </body>
 </html>
