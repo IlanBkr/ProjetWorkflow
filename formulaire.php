@@ -1,21 +1,20 @@
 <?php
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-?>
-<?php
+// Initialiser les variables avec des valeurs vides par défaut
+$nom = '';
+$prenom = '';
+$email = '';
+$message = '';
+
+// Vérifier si le formulaire a été soumis
 if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['message'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-}
-else {
-    echo "Veuillez remplir tous les champs";
-}
-if(isset($_POST['submit'])) {
-    echo "Formulaire envoyé";
+    
+    if(isset($_POST['submit'])) {
+        echo "Formulaire envoyé";
+    }
 }
 ?>
 <html>
@@ -38,15 +37,16 @@ if(isset($_POST['submit'])) {
     <title>Document</title>
 </head>
 <body>
-    <form action="traitement.php" method="post">
+    <form action="formulaire.php" method="post">
         <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom">
+        <input type="text" name="nom" id="nom"><br><br>
         <label for="prenom">Prenom</label>
-        <input type="text" name="prenom" id="prenom">
+        <input type="text" name="prenom" id="prenom"><br><br>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email"><br><br>
         <label for="message">Message</label>
+        <textarea name="message" id="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" name="submit" value="Envoyer">
     </form>
-    <input type="submit" value="Envoyer">
 </body>
 </html>
